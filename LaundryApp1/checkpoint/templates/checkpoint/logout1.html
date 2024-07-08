@@ -1,0 +1,41 @@
+#class Order(models.Model):
+    STATUS_CHOICES = [
+        ('Pending', 'Pending'),
+        ('Processing', 'Processing'),
+        ('Completed', 'Completed'),
+        ('Cancelled', 'Cancelled'),
+    ]
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='Pending')
+
+    def __str__(self):
+        return f"Order {self.id} by {self.user.username}"
+
+
+
+ def signup(request):
+        if request.method == 'POST':
+            form = CustomUserCreationForm(request.POST)
+            forms= CustomLoginForm
+    
+            if form.is_valid():
+                user = form.save()
+                print("User saved:", user)
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password1')
+                user = authenticate(request, username=username, password=password)
+                if user is not None:
+                    login(request, user)
+                    return redirect('home')  # Change 'home' to your desired redirect URL
+                else:
+                    print("Authentication failed")
+            else:
+                print("Form errors:", form.errors)
+        else:
+            forms = CustomLoginForm
+        return render(request,  'Laundryplace/dashboard.html', {'form': forms})
+    
+    

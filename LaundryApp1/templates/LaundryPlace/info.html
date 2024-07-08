@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static '/images/favicon.png' %}" type="">
+
+  <title>PHAY's LAUNDRY</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css' %}" />
+
+  <!-- Owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Font Awesome style -->
+  <link href="{% static '/css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '/css/style.css' %}" rel="stylesheet" />
+  
+  <!-- Responsive style -->
+  <link href="{% static '/css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <img src="{% static 'images/slider-bg.jpg' %}" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              PHAY's LAUNDRY
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+              </li>
+              <!--<li class="nav-item">
+                <a class="nav-link" href="about.html"> S</a>
+              </li>-->
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'info' %}">Services & Testimonials <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}">SignUp</a>
+              </li>
+
+            
+             <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Members Login</a>
+              </li> 
+            
+              <!--<li class="nav-item">
+                <a class="nav-link" href="testimonial.html">Testimonial</a>
+              </li> -->
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- service section-->
+
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Services
+        </h2>
+      </div>
+      <div class="service_container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box b1">
+              <div class="img-box">
+                <img src="{% static 'images/s1.png' %}" alt="" class="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Wash & Fold Laundry
+                  Service
+                </h5>
+                <p>
+                  When you drop off your<br>
+                  laundry, you can leave the rest to us.<br>
+                  We wash your laundry, dry it and fold into<br>
+                  neat closet-ready bundles.<br>
+                  <br>
+                  <br>
+                  Price Catalogue
+                  <br>
+                  <br>
+                
+                  Men’s suit 2pc / 3pcshs. 18,000<br>
+                  Woman’s suit 2pc / 3pcshs. 14,500<br>
+                  Junior suit 2pc / 3pcshs. 10,000<br>
+                  Trousershs. 9,500<br>
+                  Junior trousershs. 6,500<br>
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="{% static 'images/s2.png' %}" alt="" class="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Dry Cleaning
+                </h5>
+                <p>
+                  Our staff are experts in stain removal<br>
+                  before the dry cleaning process starts.<br>
+                  They will complete the cleaning, ensuring<br>
+                  quality control is adhered to from<br>
+                  beginning to end.<br>
+                  <br>
+                  <br>
+                  Price Catalogue
+                  <br>
+                  <br>
+                  Gents suit 2 pc / 3 pc - shs. 32,000<br>
+                  Ladies suit/3pc       -  shs. 25,000<br>
+                  Gent's trousers       -  shs. 15,000<br>
+                  Ladies's trousers     -  shs. 14,000<br>
+                  Junior suit 3pc       -  shs. 16,000<br>
+                  Junior dress 2pc      -  shs. 18,000<br>
+
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box b3">
+              <div class="img-box">
+                <img src="{% static 'images/s3.png' %}" alt="" class="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Steam Iron
+                </h5>
+                <p>
+                  We remove stubborn creases<br>
+                  and unwanted folds from your<br>
+                  garments.<br>
+                  <br>
+                    Price Catalogue:
+                    <br>
+                    <br>
+                    Shirt    - shs. 14,000<br>
+                    Pants    - shs. 15,000<br>
+                    Khaki trouser - shs. 15,000
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="tel:0785019032">
+          CALL TO PLACE ORDER
+        </a>
+      </div>
+      
+    </div>
+  </section> 
+
+  <!-- end service section -->
+   <br>
+   
+   
+
+  <!-- about section 
+
+  <section class="about_section about_section1">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+              the middle of text. All
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  end about section -->
+
+  <!-- why section 
+
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Why Choose Us
+        </h2>
+      </div>
+      <div class="why_container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box b1">
+              <div class="detail-box">
+                <h5>
+                  Best Pricing in Kampala 
+                </h5>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its It is a
+                  long established fact that a reader
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box b2">
+              <div class="detail-box">
+                <h5>
+                  Convenience
+                </h5>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its It is a
+                  long established fact that a reader
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box b3">
+              <div class="detail-box">
+                <h5>
+                  Quality Cleaning
+                </h5>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its It is a
+                  long established fact that a reader
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  end why section -->
+
+  <!-- about section 
+
+  <section class="about_section about_section2">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                How It Works
+              </h2>
+            </div>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+              the middle of text. All
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img2.jpg" alt="">
+            <div class="play_btn">
+              <button>
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  end about section -->
+
+  <!-- client section --> 
+
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          What Our Clients Say
+        </h2>
+      </div>
+      <div class="client_container">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{% static 'images/Melissa.jpg' %}" alt="" class="img-1">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Melissa Mulungi
+                  </h5>
+                  <h6>
+                    Influencer/Artist
+                  </h6>
+                  <p>
+                   I am never stuck with laundry these days! A simple call gets the job done and in quick time!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{%static 'images/Farridah.jpg' %}" alt="" class="img-1">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Faridah Nakazibwe
+                  </h5>
+                  <h6>
+                    Media Personality/Entrepreneur
+                  </h6>
+                  <p>
+                    Busy Work days just got easier with these around. I simply place a call and my laundry is even picked up!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{%static 'images/lynda.jpg' %}" alt="" class="img-1">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Lynda Dane
+                  </h5>
+                  <h6>
+                    Media Personality
+                  </h6>
+                  <p>
+                    The Best In Town!
+                    Would highly recommend. They always handle my Laundry!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{%static 'images/kin.jpg' %}" alt="" class="img-1">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Kin Kariisa
+                  </h5>
+                  <h6>
+                    Business Mogul/CEO Next Media Group
+                  </h6>
+                  <p>
+                    My suits are always well taken care of! My business associates even praise my clothes these days!
+                    A Top 10 Laundry Service.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <!-- end client section -->
+
+ <br>
+ <br>
+ <br>
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-3 info-col">
+          <div class="info_detail">
+            <h4>
+              About
+            </h4>
+            <p>
+              We are a dry cleaning and laundry company that provides a total service package for personal and corporate dry cleaning and laundry solutions.
+            </p>
+            <div class="info_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-6  info-col">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              Contact Info
+            </h4>
+            <div class="contact_link_box">
+              <p>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location: Kampala, Uganda
+                </span>
+              </p>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +256 785019032
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  laundryplace@gmail.com
+                </span>
+              </a>
+              <p>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <span>
+                  Mon-Sat: 09.00 am - 06.00 pm
+                </span>
+              </p>
+              <p>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <span>
+                  Sunday: closed
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By GROUP 23 Victoria University
+        
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+    <!-- jQuery -->
+    <script src="{% static '/js/jquery-3.4.1.min.js' %}"></script>
+    
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="{% static '/js/bootstrap.js' %}"></script>
+    
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{% static '/js/custom.js' %}"></script>
+    
+   <!---  Google Map API 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+      -->
+</body>
+
+
+</html>
+
